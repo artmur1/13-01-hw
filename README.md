@@ -58,3 +58,32 @@ PostgreSQL DB 8.3.0 - 8.3.7 https://www.exploit-db.com/exploits/7855
 
 ### Решение 2
 
+![alt text](https://github.com/artmur1/13-01-hw/blob/main/2-1-syn.png)
+
+Сканирование Metasploitable в режиме SYN.
+
+Отправляется по TCP запрос [SYN] и получаем от Metasploitable по TCP ответ [RST], [RST, ASK]. 
+
+---
+
+![alt text](https://github.com/artmur1/13-01-hw/blob/main/2-2-fin.png)
+
+Сканирование Metasploitable в режиме FIN.
+
+Отправляется по TCP запрос [ASK] и получаем от Metasploitable по TCP ответ [RST].
+
+---
+
+![alt text](https://github.com/artmur1/13-01-hw/blob/main/2-3-Xmas.png)
+
+Сканирование Metasploitable в режиме Xmas
+
+Отправляется по TCP запрос [FIN, PSH, URG] и получаем от Metasploitable по TCP ответ [RST, ASK].
+
+---
+
+![alt text](https://github.com/artmur1/13-01-hw/blob/main/2-4-UDP.png)
+
+Сканирование Metasploitable в режиме UDP
+
+Идет сканирование целой кучи UDP портов. Есть запросы по ICMP.
